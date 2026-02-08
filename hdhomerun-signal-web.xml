@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/petelombardo/hdhomerun-signal-web</Support>
+  <Support>https://forums.unraid.net/topic/197079-support-hdhomerun-signal-web/</Support>
   <Project>https://github.com/petelombardo/hdhomerun-signal-web</Project>
   <Overview>A modern web application that replaces the discontinued HDHomeRun Signal Android app. This web app provides real-time signal monitoring, channel tuning, and device management for HDHomeRun devices.&#xD;
 &#xD;
