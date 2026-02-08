@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>HDHomeRun-Signal-Web</Name>
+  <Repository>petelombardo/hdhomerun-signal-web</Repository>
+  <Registry>https://hub.docker.com/r/petelombardo/hdhomerun-signal-web</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/petelombardo/hdhomerun-signal-web</Support>
+  <Project>https://github.com/petelombardo/hdhomerun-signal-web</Project>
+  <Overview>A modern web application that replaces the discontinued HDHomeRun Signal Android app. This web app provides real-time signal monitoring, channel tuning, and device management for HDHomeRun devices.&#xD;
+&#xD;
+Features:&#xD;
+- Device Discovery: Automatically finds HDHomeRun devices on your network&#xD;
+- Real-time Signal Monitoring: Live updates of signal strength, SNR quality, and symbol quality with dBm/dB estimates&#xD;
+- Antenna Tuning Mode: Monitor all tuners simultaneously with real-time graphs for optimal antenna positioning&#xD;
+- Direct Channel Tuning: Quickly tune to specific channels with channel up/down controls&#xD;
+- Multi-tuner Support: Switch between tuners on devices that support multiple tuners&#xD;
+- ATSC 3.0 Support: Displays PLP and L1 information for NextGen TV broadcasts&#xD;
+- Program Detection: Automatically shows available programs/PIDs on tuned channels&#xD;
+- Progressive Web App: Install on mobile devices for a native app experience&#xD;
+- Responsive Design: Works on both desktop and mobile devices&#xD;
+- Modern UI: Clean, dark theme interface with Material-UI components</Overview>
+  <Category>MediaApp:Other Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/petelombardo/unraid-templates/main/hdhomerun-signal-web.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/petelombardo/unraid-templates/main/icons/hdhomerun-signal-web.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="PORT" Default="3000" Mode="" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="HDHomeRun Devices" Target="HDHOMERUN_DEVICES" Default="" Mode="" Description="Manually specify HDHomeRun devices by IP or hostname (comma-separated). Leave blank for auto-discovery." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Disable Auto-Discovery" Target="HDHOMERUN_DISABLE_DISCOVERY" Default="false" Mode="" Description="Set to 'true' to disable auto-discovery and only use manually specified devices" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+</Container>
