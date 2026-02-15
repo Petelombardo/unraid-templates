@@ -3,7 +3,7 @@
   <Name>HDHomeRun-Signal-Web</Name>
   <Repository>petelombardo/hdhomerun-signal-web</Repository>
   <Registry>https://hub.docker.com/r/petelombardo/hdhomerun-signal-web</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -33,7 +33,8 @@ Features:&#xD;
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Web UI Port" Target="PORT" Default="3000" Mode="" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Container Port" Target="PORT" Default="3000" Mode="" Description="Internal port the app listens on (should match the Web UI Port container port)" Type="Variable" Display="advanced" Required="true" Mask="false">3000</Config>
   <Config Name="HDHomeRun Devices" Target="HDHOMERUN_DEVICES" Default="" Mode="" Description="Manually specify HDHomeRun devices by IP or hostname (comma-separated). Leave blank for auto-discovery." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Disable Auto-Discovery" Target="HDHOMERUN_DISABLE_DISCOVERY" Default="false" Mode="" Description="Set to 'true' to disable auto-discovery and only use manually specified devices" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
 </Container>
